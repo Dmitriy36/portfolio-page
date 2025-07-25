@@ -1,0 +1,199 @@
+:root {
+    --base-color: rgb(255, 255, 255);
+    --base-variant: #e8e9ed;
+    --text-color:black;
+    --secondary-text: grey;
+}
+
+.fixed {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+}
+
+.darkmode {
+    --base-color: rgb(0, 0, 0);
+    --base-variant: #070808;
+    --text-color:rgb(255, 255, 255);
+    --secondary-text: rgb(129, 158, 253);
+    td {
+        background-color: black;
+    }
+
+    th {
+        background-color: black;
+    }
+
+}
+
+/* .lightmode {
+    --base-color: rgb(255, 255, 255);
+    --base-variant: #6f7db4;
+    --text-color:rgb(0, 0, 0);
+    --secondary-text: rgb(6, 13, 36);
+} */
+
+body {
+    min-height: 100vh; /* 100% of the view height (vh) */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+.fixed {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: fixed;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.fixed:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.fixed:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.fixed:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+header, main, footer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* small gap between nav elements */
+}
+
+nav i { /* "nav i sub-selects the icons */
+    font-size: 1.3rem;
+}
+
+main, section {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    gap: 4rem;
+}
+
+section {
+    gap: 1rem;
+}
+
+.intro-header p { /* this sub-selects the little paragraph inside intro-header class */
+    padding-top: 0.25rem;
+}
+
+.intro-description {
+    max-width: 500px;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0; /* means 1 rem vertically and 0 rem horizontally */
+}
+
+.link-arrow {
+    color: blue;
+    transform: rotate(-45deg);
+}
+
+.color-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.tech-list {
+    display: flex;    
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* to wrap, in case overflows length of screen */
+    padding: 0.25rem 0;
+}
+
+.tech-list div {
+    padding: 0.1rem 0.5rem;    
+    /* border-radius: var(--border-radius-small); /* this is a variable from FantaCSS */ 
+    border-radius: 0.5rem;
+}
+
+.tech-list p {
+    font-size: 0.7rem;
+}
+
+/* @media queries controls which styles apply, depending on screen size. So, stuff above applies to screens smaller than 640px. */
+
+@media (min-width: 640px) { /* this triggers whenever screen is bigger than 640px - and switches style to what's in parentheses. */
+    .project-card {
+        flex-direction: row; /* so, now project-card class will have a direction of row (on bigger screens) */
+
+    }
+    .project-card .img-div {
+        max-width: 30%; /* grows up to 30% and stops */
+    }
+}
