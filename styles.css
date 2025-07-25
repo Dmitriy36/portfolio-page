@@ -11,6 +11,12 @@
     left: 30px;
 }
 
+.fixed-ukr-link {
+    position: fixed;
+    top: 20px;
+    left: 160px;
+}
+
 .darkmode {
     --base-color: rgb(0, 0, 0);
     --base-variant: #070808;
