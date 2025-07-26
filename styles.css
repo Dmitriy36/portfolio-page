@@ -1,8 +1,14 @@
+
 :root {
     --base-color: rgb(255, 255, 255);
     --base-variant: #e8e9ed;
     --text-color:black;
     --secondary-text: grey;
+}
+
+* {
+font-family: "Intel One Mono", serif;
+margin:0;
 }
 
 .fixed {
@@ -30,14 +36,11 @@
         background-color: black;
     }
 
-}
+    .project-card img {
+        border:1px solid white;
+    }
 
-/* .lightmode {
-    --base-color: rgb(255, 255, 255);
-    --base-variant: #6f7db4;
-    --text-color:rgb(0, 0, 0);
-    --secondary-text: rgb(6, 13, 36);
-} */
+}
 
 body {
     min-height: 100vh; /* 100% of the view height (vh) */
@@ -129,9 +132,7 @@ section {
     gap: 1rem;
 }
 
-.intro-header p { /* this sub-selects the little paragraph inside intro-header class */
-    padding-top: 0.25rem;
-}
+
 
 .intro-description {
     max-width: 500px;
@@ -165,6 +166,12 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.desc {
+    height:auto;
+    width:500px;
+    overflow-wrap:break-word;
 }
 
 .project-links {
@@ -202,4 +209,14 @@ section {
     .project-card .img-div {
         max-width: 30%; /* grows up to 30% and stops */
     }
+}
+
+img,
+video {
+    border-radius: var(--border-radius-large);
+    max-width: 100%;
+}
+
+img {
+    height: auto;
 }
