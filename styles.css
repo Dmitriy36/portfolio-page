@@ -96,7 +96,7 @@ body {
 }
 
 header, main, footer {
-    max-width: 800px;
+    max-width: 640px;
     width: 100%;
     margin: 0 auto;
     padding: 2rem;
@@ -136,13 +136,16 @@ section {
 
 .intro-description {
     max-width: 500px;
+    margin-bottom:0;
 }
 
 .links-container {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 0; /* means 1 rem vertically and 0 rem horizontally */
+    /* padding: 1rem 0;  */
+    margin-bottom:3rem;
+
 }
 
 .link-arrow {
