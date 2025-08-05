@@ -203,14 +203,21 @@ section {
 }
 
 /* @media queries controls which styles apply, depending on screen size. So, stuff above applies to screens smaller than 640px. */
-@media (min-width: 500px) { /* this triggers whenever screen is bigger than 640px - and switches style to what's in parentheses. */
+@media (min-width: 640px) { /* this triggers whenever screen is bigger than 640px - and switches style to what's in parentheses. */
+    
     .project-card {
         flex-direction: row; /* so, now project-card class will have a direction of row (on bigger screens) */
-
     }
     .project-card .img-div {
         max-width: 30%; /* grows up to 30% and stops */
     }
+
+    header, main, footer {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
 }
 
 img,
